@@ -11,7 +11,15 @@ class App extends Component {
         {/* please remember to split the code into multiple components only when reused in multiple places */}
         {/* please remember to add sections which will provide custom business logic to each section */}
         {/* never add everything at app level */}
+        <nav>
+          Secciones
+        </nav>
+
         <Home></Home>
+        
+        <footer>
+          Copyright 2018
+        </footer>
       </div>
     );
   }
