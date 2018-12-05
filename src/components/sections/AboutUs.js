@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import GoldenButton from '../buttons/GoldenButton'
+import { Link, Switch, Route } from 'react-router-dom';
 
 class AboutUs extends Component {
     //handler for button which is passed through props so it can be consume and their state lifted
@@ -8,15 +9,16 @@ class AboutUs extends Component {
         console.log(e)
     }
 
+    componentDidMount() {
+    
+    }
+
     render() {
+        console.log()
+
         return (
             <div>
                 About Us section
-
-                <div>
-                    {/* here we are using the multiple buttons we have created through inheritance */}
-                    <GoldenButton externalClickHandler={this.parentClickHandler}>Ok!</GoldenButton>
-                </div>
             </div>
         )
     }

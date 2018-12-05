@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Home from './components/sections/Home'
 import AboutUs from './components/sections/AboutUs'
+import Projects from './components/sections/Projects'
 //2. bring onboard the router-dom functionality
 import { Link, Switch, Route } from 'react-router-dom';
 
@@ -19,6 +20,7 @@ class App extends Component {
           <ul>
             {/* 3. we setup the links through the Link component */}
             <li><Link to='/'>Home</Link></li>
+            <li><Link to='/projects/1a'>Projects</Link></li>
             <li><Link to='/about'>About</Link></li>
           </ul>
         </nav>
@@ -27,7 +29,9 @@ class App extends Component {
         <Switch>
           {/* 5. we specify the paths and the related component to be rendered when the url gets satisfied */}
           <Route exact path='/' component={Home}/>
-          <Route path='/about' component={AboutUs}/>
+          <Route exact path='/projects' component={Projects}/>
+          <Route exact path='/projects/:id' component={Projects}/>
+          <Route exact path='/about' component={AboutUs}/>
         </Switch>
 
         <footer>
